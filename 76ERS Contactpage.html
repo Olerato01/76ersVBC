@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO REQUIREMENTS (Part 3.1) -->
+  <title>Contact Us | 76ERS Volleyball Club</title>
+<meta name="description" content="Get in touch with 76ERS Volleyball Club. Find our email, postal address, social media links, or send us a direct message via our contact form.">
+<meta name="keywords" content="contact 76ERS, Bloemfontein volleyball address, Mangaung volleyball email">
+    <link rel="stylesheet" href="76ers.css">
+    <!--This is a link to the CSS style used to give the webpage some character-->
+
+    <!-- CUSTOM CSS FOR FORM VALIDATION (Part 4) -->
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            display: none; /* Hidden by default */
+            margin-top: 5px;
+        }
+        .success-message {
+            color: green;
+            font-weight: bold;
+            display: none;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!--this is just a basic structure meant to demonstaret the idea of how the website is going to be layed out-->
+    <header>
+        <img id="logo" src="76ERS logo.jpg" alt="76ERS Volleyball Club Logo">
+        <h1>76ERS Volleyball Club</h1></header>
+    <!--this header consists of the club logo and name-->
+    
+    <div id="navigation">
+        <a href="76ERS Homepage.html">Home</a> 
+        <a href="76ERS mediapage.html">Media</a> 
+        <a href="76ERS Aboutpage.html">About Us</a> 
+        <a href="76ERS Contactpage.html">Contact Us</a>
+    </div>
+    <hr>
+    <br>
+    <!--this nav tab is a placeholder for the other pages-->
+   
+   <img id="bannerimg" src="76ERS males team in 2022.jpg" alt="76ERS males teamphoto in 2022">
+   
+   <div>
+    <div id="contactshell">
+        <div id="social">
+            <section>
+                <img id="logo" src="76ERS logo.jpg" alt="76ERS Logo"> 
+                <a href="https://www.facebook.com/groups/637447016370369">76ERS Facebook Page</a>
+                <img id="logo" src="MMVA logo.jpg" alt="MMVA Logo">
+                <a href="https://www.facebook.com/mangaungvolleyball.ball">MMVA Facebook page</a>
+            </section>
+        </div>
+    </div>
+    <!--this div section is for the link for the team's social media page is as well as the link for the local leauge they play in-->
+    
+    <div id="contactshell">
+        <div id="email">
+            <section>
+            Email: 76ersvbc@gmail.com
+            </section>
+        </div>
+    </div>
+    <!--this div section is for the team's email address-->
+    
+    <div id="contactshellA">
+        <div id="address">
+            <section>
+            <p>Postal Address: 17725 Tau Street</p>
+            <p>Phase 2 Bloemanda Bloemfontein</p>
+            <p>9323</p>
+            </section>
+        </div>
+    </div>
+    </div>
+
+    <!-- NEW: CONTACT FORM WITH VALIDATION (Part 4.1) -->
+    <div class="form-container">
+        <h2>Send Us a Message</h2>
+        <p>Have a question about joining the club, sponsorships, or fixtures? Fill out the form below.</p>
+        
+        <!-- The form has novalidate to allow our custom JS to handle errors -->
+        <form id="contactForm" novalidate>
+            
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your first and last name">
+                <div class="error-message" id="nameError">Please enter your full name (at least 2 characters).</div>
+            </div>
+
+            <div class="form-group">
+                <label for="emailAddress">Email Address:</label>
+                <input type="email" id="emailAddress" name="emailAddress" placeholder="example@email.com">
+                <div class="error-message" id="emailError">Please enter a valid email address.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (10 digits):</label>
+                <input type="tel" id="phone" name="phone" placeholder="0821234567">
+                <div class="error-message" id="phoneError">Please enter a valid 10-digit phone number.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="messageType">Type of Message:</label>
+                <select id="messageType" name="messageType">
+                    <option value="">-- Select an option --</option>
+                    <option value="Join Club">I want to join the club</option>
+                    <option value="Sponsorship">Sponsorship Enquiry</option>
+                    <option value="General">General Question</option>
+                </select>
+                <div class="error-message" id="typeError">Please select a message type.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
+                <div class="error-message" id="messageError">Please type a message (at least 10 characters).</div>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+            
+            <!-- Success message hidden by default -->
+            <div class="success-message" id="successMessage">Thank you! Your message has been sent successfully.</div>
+        </form>
+    </div>
+
+    <hr>
+    <br>
+    <footer>76ERS VC est 1995</footer>
+
+<!-- LINK TO MASTER JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+header{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: rgb(113, 163, 238);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+footer{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#logo{
+    width: 75px;
+    height: 75px;
+    align-self: left;
+}
+#bannerimg{
+    width: 100%;
+    height: 100%;
+}
+/* switching from px to % allows for the banner image to adjust to any type of device and browser size*/
+#navigation {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: black;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 5%;
+}
+/*having te boarde be a % instead of px allows for it to adjust to any type of device and browser size*/
+a{
+    color: white;
+}
+#homeshell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 10px;
+}
+    #fixtures{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    #news{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+/* This is for the homepage divs related to fixtures and team news*/
+
+#contactshell{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+    #social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    #email{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+/*this id he div i created to place this section on the left of the page */
+#contactshellA{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+/*this id he div i created to place this section on the right of the page */
+
+#mediashell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+#group{
+    width: 100%;
+    height: 100%;    
+}
+/* having the images with the group id be set to 100% allows for the group image to adjust to any type of device and browser size*/

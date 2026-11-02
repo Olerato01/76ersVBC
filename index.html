@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO REQUIREMENTS (Part 3.1) -->
+    <title>76ERS Volleyball Club | Mangaung Community Volleyball</title>
+    <meta name="description" content="76ERS VC is a community-based volleyball club in Mangaung developing local talent for district, provincial, and national selection.">
+    
+    <link rel="stylesheet" href="76ers.css">
+    <!--This is a link to the CSS style used to give the webpage some character-->
+
+    <!-- LIBRARIES FOR INTERACTIVE ELEMENTS -->
+    <!-- GLightbox CSS & JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- CUSTOM CSS FOR NEW ELEMENTS -->
+    <style>
+        /* Accordion Styles */
+        .accordion-header { background: #eee; cursor: pointer; padding: 15px; width: 100%; text-align: left; border: 1px solid #ccc; outline: none; font-size: 16px; margin-top: 5px;}
+        .accordion-header.active { background: #ddd; }
+        .accordion-content { display: none; padding: 15px; border: 1px solid #ccc; border-top: none; background: #f9f9f9;}
+        
+        /* Gallery Styles */
+        .gallery { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0;}
+        .gallery a { width: 150px; height: 150px; display: block; }
+        .gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 5px; }
+        
+        /* Dynamic Search Styles */
+        .item-card { border: 1px solid #ccc; padding: 10px; margin: 5px 0; background: #fff;}
+    </style>
+</head>
+<body>
+    <!--this is just a basic structure meant to demonstaret the idea of how the website is going to be layed out-->
+    <header>
+        <img id="logo" src="76ERS logo.jpg" alt="76ERS Volleyball Club Logo">
+        <h1>76ERS Volleyball Club</h1></header>
+    <!--this header consists of the club logo and name-->
+    
+    <div id="navigation">
+        <a href="76ERS Homepage.html">Home</a> 
+        <a href="76ERS mediapage.html">Media</a> 
+        <a href="76ERS Aboutpage.html">About Us</a> 
+        <a href="76ERS Contactpage.html">Contact Us</a>
+    </div>
+    <hr>
+    <br>
+    <!--this nav tab is a placeholder for the other pages-->
+    
+    <img id="bannerimg" src="76ERS males team in 2022.jpg" alt="76ERS males teamphoto in 2022">
+    
+    <p>76ERS VC is a community-based club that develops volleyball in the schools and communities in Mangaung area with the purpose of exposing them to the district, province and national for selection in the teams.</p>
+    
+    <!-- NEW: INTERACTIVE ACCORDION (Part 2.1) -->
+    <div style="margin: 20px 0; max-width: 600px;">
+        <h2>Club Information</h2>
+        <button class="accordion-header">How to Join</button>
+        <div class="accordion-content">
+            <p>We welcome players of all skill levels. Contact us for practice times and registration fees.</p>
+        </div>
+        <button class="accordion-header">Sponsorship Opportunities</button>
+        <div class="accordion-content">
+            <p>Support local sports! We offer various sponsorship packages for businesses in Mangaung.</p>
+        </div>
+    </div>
+
+    <div id="homeshell">
+        <div id="fixtures">
+            <section>
+            <h3>Fixture Calander</h3>
+            <table border="2">
+                <tr>
+                    <th>Round</th>
+                    <th>Date</th>
+                    <th>Venue</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>09/19/2026</td>
+                    <td>Tempe</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>10/10/2026</td>
+                    <td>CUT</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>10/24/2026</td>
+                    <td>Dr Rantlai Petrus</td>
+                </tr>
+            </table>
+            </section>
+            <!--The creation of the tables was to include the teams upcoming fixtures in their local league-->
+        </div>
+     </div>    
+    <!--this is where the teams upcoming fixtures will be posted-->
+    
+    <div id="homeshell">
+        <div id="news">
+            <section>
+             <h3>Team News</h3>
+             <p>76ERS are currently working on getting a brand new team sponser. It has been a significant amount of team since the team last had a sponser. Who will their new sponder be?</p>
+            </section>
+        </div>
+    </div>
+    <!--this is where the team news and updates will be posted-->
+
+ <!-- NEW: INTERACTIVE MAP (Part 2.1) -->
+    <h3>Find Us (Mangaung Area)</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3483.673911077335!2d26.23097047606933!3d-29.17428007537316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e8fcf544d05d597%3A0x2094d05049e66fea!2sDr%20Rantlai%20Petrus%20Stadium!5e0!3m2!1sen!2sza!4v1793646883173!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <!-- NEW: DYNAMIC CONTENT & SEARCH (Part 2.2) -->
+    <h3>Club Products & Services</h3>
+    <input type="text" id="searchInput" placeholder="Search our merchandise or services..." style="padding: 10px; width: 100%; max-width: 400px; margin-bottom: 10px;">
+    <div id="itemContainer" style="max-width: 800px;">
+        <!-- Items load here via JavaScript -->
+    </div>
+
+    <!-- NEW: GALLERY WITH LIGHTBOX (Part 2.1) -->
+    <h3>Photo Gallery</h3>
+    <div class="gallery">
+        <!-- Replace the href and src with your actual images -->
+        <a href="76ERS males team in 2022.jpg" class="glightbox" data-gallery="club-gallery">
+            <img src="76ERS males team in 2022.jpg" alt="Team Photo 2022">
+        </a>
+        <!-- Example of another image - replace with actual file -->
+        <a href="484907338_76ERS females team in 2022.jpg" class="glightbox" data-gallery="club-gallery">
+            <img src="484907338_76ERS females team in 2022.jpg" alt="Volleyball Action">
+        </a>
+    </div>
+
+    <br>
+    <hr>
+    <footer>76ERS VC est1995 </footer>
+
+   <!-- LINK TO MASTER JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
